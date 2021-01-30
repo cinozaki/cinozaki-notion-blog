@@ -257,6 +257,7 @@ a {
 }
 a:hover {
   color: #3291ff;
+  cursor: pointer;
 }
 
 .links {
