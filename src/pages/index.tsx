@@ -9,27 +9,14 @@ export default () => (
   <>
     <Header titlePre="Home" />
     <div className={sharedStyles.layout}>
-      <img
-        src="/vercel-and-notion.png"
-        height="85"
-        width="250"
-        alt="Vercel + Notion"
-      />
-      <h1>My Notion Blog</h1>
+      <h1>blog.cinozaki.com</h1>
       <h2>
-        Blazing Fast Notion Blog with Next.js'{' '}
-        <ExtLink
-          href="https://github.com/vercel/next.js/issues/9524"
-          className="dotted"
-          style={{ color: 'inherit' }}
-        >
-          SSG
-        </ExtLink>
+        Blazing Fast Notion Blog with Next.js
       </h2>
 
-      <Features />
+      {/* <Features /> */}
 
-      <div className="explanation">
+      {/* <div className="explanation">
         <p>
           This is a statically generated{' '}
           <ExtLink href="https://nextjs.org">Next.js</ExtLink> site with a{' '}
@@ -61,7 +48,7 @@ export default () => (
           After finding your token and your blog's page id you should be good to
           go!
         </p>
-      </div>
+      </div> */}
     </div>
   </>
 )
