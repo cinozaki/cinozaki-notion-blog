@@ -27,6 +27,16 @@ export default ({ titlePre = '' }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
+      <h1>
+        <Link
+          href="/"
+        >
+          <a>blog.cinozaki.com</a>
+        </Link>
+      </h1>
+      <h2>
+        Blazing Fast Notion Blog with Next.js
+      </h2>
       <ul>
         {navItems.map(({ label, page, link }) => (
           <li key={label}>

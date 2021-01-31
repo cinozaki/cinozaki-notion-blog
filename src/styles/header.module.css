@@ -1,7 +1,7 @@
 .header {
   display: block;
   min-height: 64px;
-  padding: 2em 0;
+  padding: 2em 0 1em;
   text-align: center;
   letter-spacing: -0.02em;
 }
@@ -19,6 +19,14 @@
 .header :global(a) {
   color: var(--accents-3);
   font-weight: 400;
+}
+
+.header h1 a {
+  /* margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0; */
+  color: var(--accents-1);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
 }
 
 .header :global(a.active) {

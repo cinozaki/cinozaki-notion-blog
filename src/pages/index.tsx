@@ -55,11 +55,6 @@ export default ({ posts = [], preview }) => (
   <>
     <Header titlePre="Home" />
     <div className={sharedStyles.layout}>
-      <h1>blog.cinozaki.com</h1>
-      <h2>
-        Blazing Fast Notion Blog with Next.js
-      </h2>
-
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
