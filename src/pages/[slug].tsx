@@ -262,10 +262,9 @@ const RenderPost = ({ post, redirect, preview }) => {
               const childStyle: CSSProperties = useWrapper
                 ? {
                     width: '100%',
-                    height: '100%',
+                    height: 'auto',
                     border: 'none',
-                    position: 'absolute',
-                    top: 0,
+                    position: 'relative',
                   }
                 : {
                     width,
@@ -309,7 +308,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                 useWrapper ? (
                   <div
                     style={{
-                      paddingTop: `${Math.round(block_aspect_ratio * 100)}%`,
+                      // paddingTop: `${Math.round(block_aspect_ratio * 100)}%`,
                       position: 'relative',
                     }}
                     className="asset-wrapper"
