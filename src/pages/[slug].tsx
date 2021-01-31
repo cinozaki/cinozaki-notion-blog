@@ -156,7 +156,7 @@ const RenderPost = ({ post, redirect, preview }) => {
           <div className="authors">By: {post.Authors.join(' ')}</div>
         )}
         {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
+          <div className="posted">🗓️ {getDateStr(post.Date)}</div>
         )}
 
         <hr />
