@@ -9,13 +9,13 @@ import blogStyles from '../styles/blog.module.css'
 
 import {
   getBlogLink,
+  getTagLink,
   getDateStr,
   postIsPublished,
 } from '../lib/blog-helpers'
 import { textBlock } from '../lib/notion/renderers'
 import getNotionUsers from '../lib/notion/getNotionUsers'
 import getBlogIndex from '../lib/notion/getBlogIndex'
-
 
 export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
@@ -89,6 +89,18 @@ export default ({ posts = [], preview }) => (
               {post.Date && (
                 <div className="posted">🗓️ {getDateStr(post.Date)}</div>
               )}
+              {post.Tags &&
+                post.Tags.length > 0 &&
+                post.Tags.map(tag => (
+                  <Link
+                    href="/tag/[tag]"
+                    as={getTagLink(tag)}
+                    key={`${post.Slug}-${tag}`}
+                    passHref
+                  >
+                    <a className={blogStyles.tag}>🔖{tag}</a>
+                  </Link>
+                ))}
               <p>
                 {(!post.preview || post.preview.length === 0) &&
                   'No preview available'}

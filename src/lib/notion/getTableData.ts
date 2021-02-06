@@ -90,6 +90,11 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
     // auto-generate slug from title
     row.Slug = normalizeSlug(row.Slug || slugger.slug(row.Page || ''))
 
+    // Get Tags
+    row.Tags = row.Tags
+      ? row.Tags.split(',').map((tag: string) => tag.trim())
+      : []
+
     const key = row.Slug
     if (isPosts && !key) continue
 
